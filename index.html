@@ -1,266 +1,268 @@
 <!DOCTYPE html>
-<html lang=en ng-app=appXTweb>
-
-<head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name=description content="">
-    <meta name=author content="">
-    <link rel="shortcut icon" href=favicon.ico>
+<html lang="en" ng-app="appXTweb">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>XTweb</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel=stylesheet>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-        .sub-header {
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .main {
-            padding: 20px;
-        }
-        
-        .sidebar {
-            position: relative;
-            width: 100%;
-            height: 150px;
-            z-index: 1000;
-            display: block;
-            background-color: #f5f5f5;
-            border-bottom: 1px solid #eee;
-            padding-top: 0px;
-        }
-        
-        .lower-sidebar {
-            margin: 20px 0 0 0;
-            border-top: 1px solid #eee;
-            border-bottom: 0px;
-            height: auto;
-        }
-        
-        .glogo {
-            width: 50%;
-        }
-        
-        .referedLinks {
-            padding-top: 25px;
-            margin: auto;
-        }
-        
-        .category {
-            display: inline-block;
-            vertical-align: top;
-            width: 50%;
-            padding-top: 0px;
-            font-family: monospace;
-        }
-        
-        .catName {
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            border: 1px solid #EEE;
-            border-radius: 2px;
-            text-align: center;
-            margin: 2px 2px;
-            font-weight: bold;
-            font-size: large;
-            cursor: pointer;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        .catLinks {
-            display: none;
-        }
-        
-        .catLinks_v {
-            display: inline;
-        }
-        
-        .catLink {
-            display: block;
-            height: 50px;
-            line-height: 50px;
-            border: 1px solid #E9ECFF;
-            border-radius: 2px;
-            text-align: center;
-            margin: 4px 2px;
-        }
-        
-        .upper-condition {
-            padding-top: 5px;
-            margin: auto;
-            max-width: 349px;
-            min-width: 250px;
-            width: 100%;
-        }
-        
-        .lower-conditions {
-            float: left;
-            padding-top: 5px;
-            width: 33.3333%;
-            margin: 0;
-        }
-        
-        .condition {
-            width: 100%;
-            margin: auto;
-        }
-        
+      .sub-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        z-index: 1000;
+        display: block;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #eee;
+        padding-top: 0px;
+      }
+
+      .lower-sidebar {
+        margin: 20px 0 0 0;
+        border-top: 1px solid #eee;
+        border-bottom: 0px;
+        height: auto;
+      }
+
+      .glogo {
+        width: 50%;
+      }
+
+      .referedLinks {
+        padding-top: 25px;
+        margin: auto;
+      }
+
+      .category {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding-top: 0px;
+        font-family: monospace;
+      }
+
+      .catName {
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        text-align: center;
+        margin: 2px 2px;
+        font-weight: bold;
+        font-size: large;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .catLinks {
+        display: none;
+      }
+
+      .catLinks_v {
+        display: inline;
+      }
+
+      .catLink {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #e9ecff;
+        border-radius: 2px;
+        text-align: center;
+        margin: 4px 2px;
+      }
+
+      .upper-condition {
+        padding-top: 5px;
+        margin: auto;
+        max-width: 349px;
+        min-width: 250px;
+        width: 100%;
+      }
+
+      .lower-conditions {
+        float: left;
+        padding-top: 5px;
+        width: 33.3333%;
+        margin: 0;
+      }
+
+      .condition {
+        width: 100%;
+        margin: auto;
+      }
+
+      .condition-u {
+        width: 100%;
+        margin-left: 25%;
+        max-width: 222px;
+      }
+
+      .weatherLocation {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .conditionImage {
+        display: inline-block;
+        vertical-align: middle;
+        width: 45%;
+        max-width: 112px;
+      }
+
+      .conditionTemp {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+        font-family: sans-serif;
+        padding-left: 2px;
+        min-width: 65px;
+        max-width: 40%;
+        overflow-x: hidden;
+      }
+
+      .credits-google {
+        font-size: xx-small;
+        padding-top: 20px;
+        width: 467px;
+        max-width: 100%;
+        margin: auto;
+      }
+
+      .credits {
+        clear: both;
+        width: 80%;
+        max-width: 150px;
+        margin: auto;
+        padding-top: 35px;
+      }
+
+      @media (min-width: 350px) {
         .condition-u {
-            width: 100%;
-            margin-left: 25%;
-            max-width: 222px;
+          width: 100%;
+          margin-left: 25%;
+          max-width: 241px;
         }
-        
-        .weatherLocation {
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .main {
+          padding-right: 40px;
+          padding-left: 40px;
+          width: 100%;
+          margin-left: 0px;
         }
-        
+        .glogo {
+          width: 300px;
+        }
+        .category {
+          width: 150px;
+          padding-top: 15px;
+        }
+        .catName {
+          padding-left: 4px;
+          display: inherit;
+          height: initial;
+          line-height: normal;
+          border: 0px;
+          text-align: left;
+          margin: 0;
+          font-weight: normal;
+          font-size: medium;
+          cursor: default;
+        }
+        .catLinks {
+          display: inline;
+        }
+        .catLink {
+          height: 20px;
+          line-height: 20px;
+          border: 0px;
+          text-align: left;
+          padding-left: 8px;
+        }
+        .condition {
+          width: 80%;
+        }
+      }
+
+      @media (min-width: 1038px) {
+        .sidebar {
+          position: fixed;
+          width: 16.66666667%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          padding: 0px 5px;
+          border-right: 1px solid #eee;
+        }
+        .lower-sidebar {
+          margin-top: 0px;
+          margin-left: 83.33333333%;
+          border-left: 1px solid #eee;
+          border-right: 0px;
+        }
+        .main {
+          width: 66.66666667%;
+          margin-left: 16.66666667%;
+          margin-right: 16.66666667%;
+        }
+        .upper-condition {
+          padding: 0px 5px;
+          margin-top: 20px;
+          width: 100%;
+          min-width: initial;
+        }
+        .lower-conditions {
+          padding: 0px 5px;
+          margin: auto;
+          margin-top: 20px;
+          width: 100%;
+        }
+        .condition {
+          width: 100%;
+        }
+        .condition-u {
+          margin-left: 0px;
+          max-width: none;
+        }
         .conditionImage {
-            display: inline-block;
-            vertical-align: middle;
-            width: 45%;
-            max-width: 112px;
+          width: 45%;
+          max-width: none;
         }
-        
         .conditionTemp {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 15px;
-            font-family: sans-serif;
-            padding-left: 2px;
-            min-width: 65px;
-            max-width: 40%;
-            overflow-x: hidden;
+          padding-left: 6px;
+          max-width: 52%;
         }
-        
         .credits-google {
-            font-size: xx-small;
-            padding-top: 20px;
-            width: 467px;
-            max-width: 100%;
-            margin: auto;
+          float: right;
+          margin: 0px;
         }
-        
-        .credits {
-            clear: both;
-            width: 80%;
-            max-width: 150px;
-            margin: auto;
-            padding-top: 35px;
-        }
-        
-        @media (min-width:350px) {
-            .condition-u {
-                width: 100%;
-                margin-left: 25%;
-                max-width: 241px;
-            }
-        }
-        
-        @media (min-width:768px) {
-            .main {
-                padding-right: 40px;
-                padding-left: 40px;
-                width: 100%;
-                margin-left: 0px;
-            }
-            .glogo {
-                width: 300px;
-            }
-            .category {
-                width: 150px;
-                padding-top: 15px;
-            }
-            .catName {
-                padding-left: 4px;
-                display: inherit;
-                height: initial;
-                line-height: normal;
-                border: 0px;
-                text-align: left;
-                margin: 0;
-                font-weight: normal;
-                font-size: medium;
-                cursor: default;
-            }
-            .catLinks {
-                display: inline;
-            }
-            .catLink {
-                height: 20px;
-                line-height: 20px;
-                border: 0px;
-                text-align: left;
-                padding-left: 8px;
-            }
-            .condition {
-                width: 80%;
-            }
-        }
-        
-        @media (min-width:1038px) {
-            .sidebar {
-                position: fixed;
-                width: 16.66666667%;
-                height: 100%;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                padding: 0px 5px;
-                border-right: 1px solid #eee;
-            }
-            .lower-sidebar {
-                margin-top: 0px;
-                margin-left: 83.33333333%;
-                border-left: 1px solid #eee;
-                border-right: 0px;
-            }
-            .main {
-                width: 66.66666667%;
-                margin-left: 16.66666667%;
-                margin-right: 16.66666667%;
-            }
-            .upper-condition {
-                padding: 0px 5px;
-                margin-top: 20px;
-                width: 100%;
-                min-width: initial;
-            }
-            .lower-conditions {
-                padding: 0px 5px;
-                margin: auto;
-                margin-top: 20px;
-                width: 100%;
-            }
-            .condition {
-                width: 100%;
-            }
-            .condition-u {
-                margin-left: 0px;
-                max-width: none;
-            }
-            .conditionImage {
-                width: 45%;
-                max-width: none;
-            }
-            .conditionTemp {
-                padding-left: 6px;
-                max-width: 52%;
-            }
-            .credits-google {
-                float: right;
-                margin: 0px;
-            }
-        }
+      }
     </style>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -268,472 +270,681 @@
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
     <script>
-        var appXTweb = angular.module('appXTweb', []);
-        appXTweb.controller('mainController', ['$scope', '$http', function($scope, $http) {
-            var url = "https://api.wunderground.com/api/6010eb931ae088e0/geolookup/conditions/forecast/q/autoip.json?callback=JSON_CALLBACK";
-            $scope.predefinedMaxLinks = 5;
-            $scope.weatherLocation = "";
-            $scope.conditionImage = "";
-            $scope.conditionTemp = "";
-            $scope.forecastday = [];
-            if (window.matchMedia("(min-width: 1230px)").matches) {
-                $scope.windowWidth = 3;
-            } else if (window.matchMedia("(min-width: 768px)").matches) {
-                $scope.windowWidth = 2;
-            } else {
-                $scope.windowWidth = 1;
+      var appXTweb = angular.module("appXTweb", []);
+      appXTweb.controller("mainController", [
+        "$scope",
+        "$http",
+        function ($scope, $http) {
+          var url =
+            "https://api.wunderground.com/api/6010eb931ae088e0/geolookup/conditions/forecast/q/autoip.json?callback=JSON_CALLBACK";
+          $scope.predefinedMaxLinks = 5;
+          $scope.weatherLocation = "";
+          $scope.conditionImage = "";
+          $scope.conditionTemp = "";
+          $scope.forecastday = [];
+          if (window.matchMedia("(min-width: 1230px)").matches) {
+            $scope.windowWidth = 3;
+          } else if (window.matchMedia("(min-width: 768px)").matches) {
+            $scope.windowWidth = 2;
+          } else {
+            $scope.windowWidth = 1;
+          }
+          var needDataUpdate = true;
+          var now = new Date();
+          if (
+            localStorage.localWeatherData &&
+            localStorage.localWeatherData !== "{}"
+          ) {
+            if (!localStorage.lastWeatherDataUpdate)
+              localStorage.lastWeatherDataUpdate = now;
+            else {
+              var lastWeatherDataUpdate = Date.parse(
+                localStorage.lastWeatherDataUpdate
+              );
+              if (now - lastWeatherDataUpdate < 1000 * 60 * 60) {
+                needDataUpdate = false;
+                populateWeather(JSON.parse(localStorage.localWeatherData));
+              }
             }
-            var needDataUpdate = true;
-            var now = new Date();
-            if (localStorage.localWeatherData && localStorage.localWeatherData !== '{}') {
-                if (!localStorage.lastWeatherDataUpdate)
-                    localStorage.lastWeatherDataUpdate = now;
-                else {
-                    var lastWeatherDataUpdate = Date.parse(localStorage.lastWeatherDataUpdate);
-                    if (now - lastWeatherDataUpdate < (1000 * 60 * 60)) {
-                        needDataUpdate = false;
-                        populateWeather(JSON.parse(localStorage.localWeatherData));
-                    }
+          }
+          if (needDataUpdate) {
+            localStorage.lastWeatherDataUpdate = now;
+            $http.jsonp(url).success(function (data) {
+              $scope.weatherData = data;
+              localStorage.localWeatherData = JSON.stringify(data);
+              if (!angular.isUndefined($scope.weatherData)) {
+                populateWeather($scope.weatherData);
+              }
+            });
+          }
+
+          function populateWeather(weatherData) {
+            if (typeof weatherData.response.error !== "object") {
+              $scope.weatherLocation = weatherData.location.city;
+              $scope.conditionImage = getImageUrl(
+                weatherData.current_observation.icon
+              );
+              $scope.conditionImageTitle =
+                weatherData.current_observation.weather;
+              $scope.conditionTemp = weatherData.current_observation.temp_c;
+              $scope.forecastday =
+                weatherData.forecast.simpleforecast.forecastday;
+              for (var day in $scope.forecastday) {
+                if (day > 0) {
+                  $scope.forecastday[day].conditionImage = getImageUrl(
+                    $scope.forecastday[day].icon
+                  );
                 }
+              }
+              var d = new Date(localStorage.lastWeatherDataUpdate);
+              var dDate = d.getDate();
+              var dMonth = d.getMonth() + 1;
+              var dYear = d.getFullYear();
+              var dHours = d.getHours();
+              var dMinutes = d.getMinutes();
+              $scope.lastWeatherDataUpdate =
+                dYear +
+                "-" +
+                dMonth +
+                "-" +
+                dDate +
+                " at " +
+                dHours +
+                ":" +
+                dMinutes;
             }
-            if (needDataUpdate) {
-                localStorage.lastWeatherDataUpdate = now;
-                $http.jsonp(url).success(function(data) {
-                    $scope.weatherData = data;
-                    localStorage.localWeatherData = JSON.stringify(data);
-                    if (!angular.isUndefined($scope.weatherData)) {
-                        populateWeather($scope.weatherData)
-                    }
-                });
-            }
+          }
 
-            function populateWeather(weatherData) {							if (typeof weatherData.response.error !== "object") {				
-					$scope.weatherLocation = weatherData.location.city;
-					$scope.conditionImage = getImageUrl(weatherData.current_observation.icon);
-					$scope.conditionImageTitle = weatherData.current_observation.weather;
-					$scope.conditionTemp = weatherData.current_observation.temp_c;
-					$scope.forecastday = weatherData.forecast.simpleforecast.forecastday;
-					for (var day in $scope.forecastday) {
-						if (day > 0) {
-							$scope.forecastday[day].conditionImage = getImageUrl($scope.forecastday[day].icon);
-						}
-					}
-					var d = new Date(localStorage.lastWeatherDataUpdate);
-					var dDate = d.getDate();
-					var dMonth = d.getMonth() + 1;
-					var dYear = d.getFullYear();
-					var dHours = d.getHours();
-					var dMinutes = d.getMinutes();
-					$scope.lastWeatherDataUpdate = dYear + "-" + dMonth + "-" + dDate + " at " + dHours + ":" + dMinutes;				}
-            }
-
-            function getImageUrl(weather) {
-                if (weather == "chanceflurries" || weather == "chancesleet" || weather == "sleet" || weather == "flurries")
-                    return "images/icons/sleet.svg";
-                if (weather == "clear" || weather == "sunny" || weather == "mostlysunny")
-                    return "images/icons/clear.svg";
-                if (weather == "chancerain" || weather == "rain")
-                    return "images/icons/rain.svg";
-                if (weather == "chancesnow" || weather == "snow")
-                    return "images/icons/snow.svg";
-                if (weather == "chancetstorms" || weather == "tstorms")
-                    return "images/icons/tstorms.svg";
-                if (weather == "cloudy")
-                    return "images/icons/cloudy.svg";
-                if (weather == "fog")
-                    return "images/icons/fog.svg";
-                if (weather == "hazy")
-                    return "images/icons/hazy.svg";
-                if (weather == "mostlycloudy")
-                    return "images/icons/mostlycloudy.svg";
-                if (weather == "partlycloudy" || weather == "partlysunny")
-                    return "images/icons/partlycloudy.svg";
-                return "images/icons/unknown.svg";
-            }
-            $scope.selectedIndex = -1;
-            $scope.itemClicked = function($index) {
-                if ($scope.selectedIndex == $index)
-                    $scope.selectedIndex = -1;
-                else
-                    $scope.selectedIndex = $index;
-            };
-            $scope.links = [{
-                "catName": "Webmails",
-                "catLinks": [{
-                    "linkName": "GMAIL",
-                    "linkUrl": "http://mail.google.com/mail/"
-                }, {
-                    "linkName": "YAHOO MAIL",
-                    "linkUrl": "https://mail.yahoo.com/"
-                }, {
-                    "linkName": "HOTMAIL",
-                    "linkUrl": "http://www.hotmail.com/"
-                }, {
-                    "linkName": "OVH",
-                    "linkUrl": "http://www.ovh.com/fr/index.xml"
-                }, {
-                    "linkName": "OVH PHPMYADMIN",
-                    "linkUrl": "https://phpmyadmin.ovh.net/"
-                }, {
-                    "linkName": "OVH WEBMAIL",
-                    "linkUrl": "http://webmail.ovh.net/"
-                }, {
-                    "linkName": "EmailR",
-                    "linkUrl": "http://www.emailr.com/"
-                }]
-            }, {
-                "catName": "Social",
-                "catLinks": [{
-                    "linkName": "GOOGLE +",
-                    "linkUrl": "https://plus.google.com/"
-                }, {
-                    "linkName": "FACEBOOK",
-                    "linkUrl": "http://www.facebook.com"
-                }, {
-                    "linkName": "LINKEDIN",
-                    "linkUrl": "http://www.linkedin.com/"
-                }, {
-                    "linkName": "TWITTER",
-                    "linkUrl": "http://twitter.com/"
-                }]
-            }, {
-                "catName": "Dictionary",
-                "catLinks": [{
-                    "linkName": "GOOGLE Translate",
-                    "linkUrl": "http://www.google.com/language_tools?hl=fr"
-                }, {
-                    "linkName": "DICTIONNAIRE",
-                    "linkUrl": "http://www.le-dictionnaire.com/"
-                }, {
-                    "linkName": "SYNONYMES",
-                    "linkUrl": "http://elsap1.unicaen.fr/cgi-bin/cherches.cgi"
-                }, {
-                    "linkName": "DICTIONARY",
-                    "linkUrl": "http://dictionary.reference.com/"
-                }, {
-                    "linkName": "WORDREFERENCE",
-                    "linkUrl": "http://www.wordreference.com/"
-                }, {
-                    "linkName": "CONJUGAISON",
-                    "linkUrl": "http://www.leconjugueur.com/"
-                }, {
-                    "linkName": "Figures de style",
-                    "linkUrl": "http://www.bacdefrancais.net/figures.htm"
-                }]
-            }, {
-                "catName": "Banks",
-                "catLinks": [{
-                    "linkName": "CHASE",
-                    "linkUrl": "https://www.chase.com"
-                }, {
-                    "linkName": "SOCIETE GENERALE",
-                    "linkUrl": "http://www.particuliers.societegenerale.fr/"
-                }, {
-                    "linkName": "MINT",
-                    "linkUrl": "https://wwws.mint.com/"
-                }, {
-                    "linkName": "ING BELGIUM",
-                    "linkUrl": "http://homebank.ing.be"
-                }, {
-                    "linkName": "CREDIT AGRICOLE",
-                    "linkUrl": "http://www.credit-agricole.fr/"
-                }, {
-                    "linkName": "PayPal",
-                    "linkUrl": "http://www.paypal.fr/fr"
-                }, {
-                    "linkName": "Deutsche Bank",
-                    "linkUrl": "https://secure.deutschebank.be/login/login.cgi?language=fr"
-                }]
-            }, {
-                "catName": "Maps",
-                "catLinks": [{
-                    "linkName": "GOOGLE Maps",
-                    "linkUrl": "http://maps.google.com/"
-                }, {
-                    "linkName": "BING Maps",
-                    "linkUrl": "http://www.bing.com/maps/"
-                }]
-            }, {
-                "catName": "Videos",
-                "catLinks": [{
-                    "linkName": "YOUTUBE",
-                    "linkUrl": "http://www.youtube.com/"
-                }, {
-                    "linkName": "DAILYMOTION",
-                    "linkUrl": "http://www.dailymotion.com/fr"
-                }, {
-                    "linkName": "NETFLIX",
-                    "linkUrl": "http://www.netflix.com/"
-                }, {
-                    "linkName": "COUCHTUNER",
-                    "linkUrl": "http://www.couchtuner.eu/"
-                }, {
-                    "linkName": "VIMEO",
-                    "linkUrl": "https://vimeo.com/"
-                }]
-            }, {
-                "catName": "Fonts",
-                "catLinks": [{
-                    "linkName": "GOOGLE Fonts",
-                    "linkUrl": "http://www.google.com/fonts"
-                }, {
-                    "linkName": "URBANFONTS",
-                    "linkUrl": "http://www.urbanfonts.com/"
-                }, {
-                    "linkName": "DAFONT",
-                    "linkUrl": "http://www.dafont.com/"
-                }]
-            }, {
-                "catName": "Images",
-                "catLinks": [{
-                    "linkName": "GOOGLE Images",
-                    "linkUrl": "http://images.google.com/"
-                }, {
-                    "linkName": "FOTOLIA",
-                    "linkUrl": "http://fr.fotolia.com/partner/200629665"
-                }, {
-                    "linkName": "DREAMSTIME",
-                    "linkUrl": "http://www.dreamstime.com/"
-                }]
-            }, {
-                "catName": "Documents",
-                "catLinks": [{
-                    "linkName": "GOOGLE Drive",
-                    "linkUrl": "http://drive.google.com/"
-                }, {
-                    "linkName": "DROPBOX",
-                    "linkUrl": "https://www.dropbox.com/"
-                }, {
-                    "linkName": "ONEDRIVE",
-                    "linkUrl": "https://onedrive.live.com"
-                }]
-            }, {
-                "catName": "Travel",
-                "catLinks": [{
-                    "linkName": "TRIPADVISOR",
-                    "linkUrl": "http://www.tripadvisor.com/"
-                }, {
-                    "linkName": "EXPEDIA",
-                    "linkUrl": "http://www.expedia.com"
-                }, {
-                    "linkName": "SN",
-                    "linkUrl": "http://www.flysn.be/fr_be/home/default.aspx"
-                }, {
-                    "linkName": "AF",
-                    "linkUrl": "http://www.airfrance.com"
-                }, {
-                    "linkName": "JETBLUE",
-                    "linkUrl": "http://www.jetblue.com/"
-                }, {
-                    "linkName": "HERTZ",
-                    "linkUrl": "https://www.hertz.com/"
-                }]
-            }, {
-                "catName": "Music",
-                "catLinks": [{
-                    "linkName": "SPOTIFY",
-                    "linkUrl": "https://www.spotify.com/"
-                }, {
-                    "linkName": "GROOVESHARK",
-                    "linkUrl": "http://www.grooveshark.com/"
-                }, {
-                    "linkName": "PANDORA",
-                    "linkUrl": "http://www.pandora.com/"
-                }, {
-                    "linkName": "DEEZER",
-                    "linkUrl": "http://www.deezer.com/"
-                }]
-            }, {
-                "catName": "Colors",
-                "catLinks": [{
-                    "linkName": "GRADIENT",
-                    "linkUrl": "http://www.colorzilla.com/gradient-editor/"
-                }, {
-                    "linkName": "KULER",
-                    "linkUrl": "https://kuler.adobe.com/create/color-wheel/"
-                }]
-            }, {
-                "catName": "Icons",
-                "catLinks": [{
-                    "linkName": "ICONFINDER",
-                    "linkUrl": "https://www.iconfinder.com/"
-                }, {
-                    "linkName": "ICONSEEKER",
-                    "linkUrl": "http://iconseeker.com/"
-                }, {
-                    "linkName": "ICONBUG",
-                    "linkUrl": "http://iconbug.com/"
-                }, {
-                    "linkName": "ICONARCHIVE",
-                    "linkUrl": "http://www.iconarchive.com/"
-                }, {
-                    "linkName": "VERYICON",
-                    "linkUrl": "http://www.veryicon.com/"
-                }]
-            }, {
-                "catName": "ICHEC",
-                "catLinks": [{
-                    "linkName": "ICHEC.BE",
-                    "linkUrl": "http://www.ichec.be"
-                }, {
-                    "linkName": "ALICHEC",
-                    "linkUrl": "http://www.alichec.be/"
-                }, {
-                    "linkName": "CICHEC.BE",
-                    "linkUrl": "http://www.cichec.be"
-                }, {
-                    "linkName": "AIESEC",
-                    "linkUrl": "http://www.aiesec.net/"
-                }, {
-                    "linkName": "ICHEC CAMPUS",
-                    "linkUrl": "http://www.icheccampus.ichec.be/"
-                }]
-            }, {
-                "catName": "GSM",
-                "catLinks": [{
-                    "linkName": "PROXIMUS",
-                    "linkUrl": "http://customer.proximus.be/fr/index.html"
-                }, {
-                    "linkName": "BASE",
-                    "linkUrl": "https://www.kpnonline.be/"
-                }, {
-                    "linkName": "MOBISTAR",
-                    "linkUrl": "http://www.mobistar.be/"
-                }, {
-                    "linkName": "Quel Opérateur?",
-                    "linkUrl": "http://www.1399.be/"
-                }]
-            }, {
-                "catName": "Shopping",
-                "catLinks": [{
-                    "linkName": "AMAZON",
-                    "linkUrl": "http://www.amazon.com/"
-                }, {
-                    "linkName": "GOOGLE Play",
-                    "linkUrl": "https://play.google.com/"
-                }, {
-                    "linkName": "SHOPPING EXPRESS",
-                    "linkUrl": "https://www.google.com/shopping/express/"
-                }, {
-                    "linkName": "AMAZON FR",
-                    "linkUrl": "http://www.amazon.fr/"
-                }, {
-                    "linkName": "TOP ACHAT",
-                    "linkUrl": "http://www.topachat.com/accueil/index.php"
-                }, {
-                    "linkName": "RUE DU COMMERCE",
-                    "linkUrl": "http://www.rueducommerce.fr/home/index.htm"
-                }]
-            }, {
-                "catName": "Media",
-                "catLinks": [{
-                    "linkName": "CNN",
-                    "linkUrl": "http://www.cnn.com/"
-                }, {
-                    "linkName": "EURONEWS",
-                    "linkUrl": "http://www.euronews.net/"
-                }, {
-                    "linkName": "LE SOIR",
-                    "linkUrl": "http://www.lesoir.be/"
-                }, {
-                    "linkName": "7SUR7",
-                    "linkUrl": "http://www.7sur7.be/"
-                }, {
-                    "linkName": "FEEDLY",
-                    "linkUrl": "http://feedly.com/"
-                }, {
-                    "linkName": "BBC",
-                    "linkUrl": "http://news.bbc.co.uk/"
-                }, {
-                    "linkName": "FIGARO",
-                    "linkUrl": "http://www.lefigaro.fr/"
-                }, {
-                    "linkName": "MONDE",
-                    "linkUrl": "http://www.lemonde.fr/"
-                }]
-            }];
-        }]);
+          function getImageUrl(weather) {
+            if (
+              weather == "chanceflurries" ||
+              weather == "chancesleet" ||
+              weather == "sleet" ||
+              weather == "flurries"
+            )
+              return "images/icons/sleet.svg";
+            if (
+              weather == "clear" ||
+              weather == "sunny" ||
+              weather == "mostlysunny"
+            )
+              return "images/icons/clear.svg";
+            if (weather == "chancerain" || weather == "rain")
+              return "images/icons/rain.svg";
+            if (weather == "chancesnow" || weather == "snow")
+              return "images/icons/snow.svg";
+            if (weather == "chancetstorms" || weather == "tstorms")
+              return "images/icons/tstorms.svg";
+            if (weather == "cloudy") return "images/icons/cloudy.svg";
+            if (weather == "fog") return "images/icons/fog.svg";
+            if (weather == "hazy") return "images/icons/hazy.svg";
+            if (weather == "mostlycloudy")
+              return "images/icons/mostlycloudy.svg";
+            if (weather == "partlycloudy" || weather == "partlysunny")
+              return "images/icons/partlycloudy.svg";
+            return "images/icons/unknown.svg";
+          }
+          $scope.selectedIndex = -1;
+          $scope.itemClicked = function ($index) {
+            if ($scope.selectedIndex == $index) $scope.selectedIndex = -1;
+            else $scope.selectedIndex = $index;
+          };
+          $scope.links = [
+            {
+              catName: "Webmails",
+              catLinks: [
+                {
+                  linkName: "GMAIL",
+                  linkUrl: "http://mail.google.com/mail/",
+                },
+                {
+                  linkName: "YAHOO MAIL",
+                  linkUrl: "https://mail.yahoo.com/",
+                },
+                {
+                  linkName: "HOTMAIL",
+                  linkUrl: "http://www.hotmail.com/",
+                },
+                {
+                  linkName: "OVH",
+                  linkUrl: "http://www.ovh.com/fr/index.xml",
+                },
+                {
+                  linkName: "OVH PHPMYADMIN",
+                  linkUrl: "https://phpmyadmin.ovh.net/",
+                },
+                {
+                  linkName: "OVH WEBMAIL",
+                  linkUrl: "http://webmail.ovh.net/",
+                },
+                {
+                  linkName: "EmailR",
+                  linkUrl: "http://www.emailr.com/",
+                },
+              ],
+            },
+            {
+              catName: "Social",
+              catLinks: [
+                {
+                  linkName: "GOOGLE +",
+                  linkUrl: "https://plus.google.com/",
+                },
+                {
+                  linkName: "FACEBOOK",
+                  linkUrl: "http://www.facebook.com",
+                },
+                {
+                  linkName: "LINKEDIN",
+                  linkUrl: "http://www.linkedin.com/",
+                },
+                {
+                  linkName: "TWITTER",
+                  linkUrl: "http://twitter.com/",
+                },
+              ],
+            },
+            {
+              catName: "Dictionary",
+              catLinks: [
+                {
+                  linkName: "GOOGLE Translate",
+                  linkUrl: "http://www.google.com/language_tools?hl=fr",
+                },
+                {
+                  linkName: "DICTIONNAIRE",
+                  linkUrl: "http://www.le-dictionnaire.com/",
+                },
+                {
+                  linkName: "SYNONYMES",
+                  linkUrl: "http://elsap1.unicaen.fr/cgi-bin/cherches.cgi",
+                },
+                {
+                  linkName: "DICTIONARY",
+                  linkUrl: "http://dictionary.reference.com/",
+                },
+                {
+                  linkName: "WORDREFERENCE",
+                  linkUrl: "http://www.wordreference.com/",
+                },
+                {
+                  linkName: "CONJUGAISON",
+                  linkUrl: "http://www.leconjugueur.com/",
+                },
+                {
+                  linkName: "Figures de style",
+                  linkUrl: "http://www.bacdefrancais.net/figures.htm",
+                },
+              ],
+            },
+            {
+              catName: "Banks",
+              catLinks: [
+                {
+                  linkName: "CHASE",
+                  linkUrl: "https://www.chase.com",
+                },
+                {
+                  linkName: "SOCIETE GENERALE",
+                  linkUrl: "http://www.particuliers.societegenerale.fr/",
+                },
+                {
+                  linkName: "MINT",
+                  linkUrl: "https://wwws.mint.com/",
+                },
+                {
+                  linkName: "ING BELGIUM",
+                  linkUrl: "http://homebank.ing.be",
+                },
+                {
+                  linkName: "CREDIT AGRICOLE",
+                  linkUrl: "http://www.credit-agricole.fr/",
+                },
+                {
+                  linkName: "PayPal",
+                  linkUrl: "http://www.paypal.fr/fr",
+                },
+                {
+                  linkName: "Deutsche Bank",
+                  linkUrl:
+                    "https://secure.deutschebank.be/login/login.cgi?language=fr",
+                },
+              ],
+            },
+            {
+              catName: "Maps",
+              catLinks: [
+                {
+                  linkName: "GOOGLE Maps",
+                  linkUrl: "http://maps.google.com/",
+                },
+                {
+                  linkName: "BING Maps",
+                  linkUrl: "http://www.bing.com/maps/",
+                },
+              ],
+            },
+            {
+              catName: "Videos",
+              catLinks: [
+                {
+                  linkName: "YOUTUBE",
+                  linkUrl: "http://www.youtube.com/",
+                },
+                {
+                  linkName: "DAILYMOTION",
+                  linkUrl: "http://www.dailymotion.com/fr",
+                },
+                {
+                  linkName: "NETFLIX",
+                  linkUrl: "http://www.netflix.com/",
+                },
+                {
+                  linkName: "COUCHTUNER",
+                  linkUrl: "http://www.couchtuner.eu/",
+                },
+                {
+                  linkName: "VIMEO",
+                  linkUrl: "https://vimeo.com/",
+                },
+              ],
+            },
+            {
+              catName: "Fonts",
+              catLinks: [
+                {
+                  linkName: "GOOGLE Fonts",
+                  linkUrl: "http://www.google.com/fonts",
+                },
+                {
+                  linkName: "URBANFONTS",
+                  linkUrl: "http://www.urbanfonts.com/",
+                },
+                {
+                  linkName: "DAFONT",
+                  linkUrl: "http://www.dafont.com/",
+                },
+              ],
+            },
+            {
+              catName: "Images",
+              catLinks: [
+                {
+                  linkName: "GOOGLE Images",
+                  linkUrl: "http://images.google.com/",
+                },
+                {
+                  linkName: "FOTOLIA",
+                  linkUrl: "http://fr.fotolia.com/partner/200629665",
+                },
+                {
+                  linkName: "DREAMSTIME",
+                  linkUrl: "http://www.dreamstime.com/",
+                },
+              ],
+            },
+            {
+              catName: "Documents",
+              catLinks: [
+                {
+                  linkName: "GOOGLE Drive",
+                  linkUrl: "http://drive.google.com/",
+                },
+                {
+                  linkName: "DROPBOX",
+                  linkUrl: "https://www.dropbox.com/",
+                },
+                {
+                  linkName: "ONEDRIVE",
+                  linkUrl: "https://onedrive.live.com",
+                },
+              ],
+            },
+            {
+              catName: "Travel",
+              catLinks: [
+                {
+                  linkName: "TRIPADVISOR",
+                  linkUrl: "http://www.tripadvisor.com/",
+                },
+                {
+                  linkName: "EXPEDIA",
+                  linkUrl: "http://www.expedia.com",
+                },
+                {
+                  linkName: "SN",
+                  linkUrl: "http://www.flysn.be/fr_be/home/default.aspx",
+                },
+                {
+                  linkName: "AF",
+                  linkUrl: "http://www.airfrance.com",
+                },
+                {
+                  linkName: "JETBLUE",
+                  linkUrl: "http://www.jetblue.com/",
+                },
+                {
+                  linkName: "HERTZ",
+                  linkUrl: "https://www.hertz.com/",
+                },
+              ],
+            },
+            {
+              catName: "Music",
+              catLinks: [
+                {
+                  linkName: "SPOTIFY",
+                  linkUrl: "https://www.spotify.com/",
+                },
+                {
+                  linkName: "GROOVESHARK",
+                  linkUrl: "http://www.grooveshark.com/",
+                },
+                {
+                  linkName: "PANDORA",
+                  linkUrl: "http://www.pandora.com/",
+                },
+                {
+                  linkName: "DEEZER",
+                  linkUrl: "http://www.deezer.com/",
+                },
+              ],
+            },
+            {
+              catName: "Colors",
+              catLinks: [
+                {
+                  linkName: "GRADIENT",
+                  linkUrl: "http://www.colorzilla.com/gradient-editor/",
+                },
+                {
+                  linkName: "KULER",
+                  linkUrl: "https://kuler.adobe.com/create/color-wheel/",
+                },
+              ],
+            },
+            {
+              catName: "Icons",
+              catLinks: [
+                {
+                  linkName: "ICONFINDER",
+                  linkUrl: "https://www.iconfinder.com/",
+                },
+                {
+                  linkName: "ICONSEEKER",
+                  linkUrl: "http://iconseeker.com/",
+                },
+                {
+                  linkName: "ICONBUG",
+                  linkUrl: "http://iconbug.com/",
+                },
+                {
+                  linkName: "ICONARCHIVE",
+                  linkUrl: "http://www.iconarchive.com/",
+                },
+                {
+                  linkName: "VERYICON",
+                  linkUrl: "http://www.veryicon.com/",
+                },
+              ],
+            },
+            {
+              catName: "ICHEC",
+              catLinks: [
+                {
+                  linkName: "ICHEC.BE",
+                  linkUrl: "http://www.ichec.be",
+                },
+                {
+                  linkName: "ALICHEC",
+                  linkUrl: "http://www.alichec.be/",
+                },
+                {
+                  linkName: "CICHEC.BE",
+                  linkUrl: "http://www.cichec.be",
+                },
+                {
+                  linkName: "AIESEC",
+                  linkUrl: "http://www.aiesec.net/",
+                },
+                {
+                  linkName: "ICHEC CAMPUS",
+                  linkUrl: "http://www.icheccampus.ichec.be/",
+                },
+              ],
+            },
+            {
+              catName: "GSM",
+              catLinks: [
+                {
+                  linkName: "PROXIMUS",
+                  linkUrl: "http://customer.proximus.be/fr/index.html",
+                },
+                {
+                  linkName: "BASE",
+                  linkUrl: "https://www.kpnonline.be/",
+                },
+                {
+                  linkName: "MOBISTAR",
+                  linkUrl: "http://www.mobistar.be/",
+                },
+                {
+                  linkName: "Quel Opérateur?",
+                  linkUrl: "http://www.1399.be/",
+                },
+              ],
+            },
+            {
+              catName: "Shopping",
+              catLinks: [
+                {
+                  linkName: "AMAZON",
+                  linkUrl: "http://www.amazon.com/",
+                },
+                {
+                  linkName: "GOOGLE Play",
+                  linkUrl: "https://play.google.com/",
+                },
+                {
+                  linkName: "SHOPPING EXPRESS",
+                  linkUrl: "https://www.google.com/shopping/express/",
+                },
+                {
+                  linkName: "AMAZON FR",
+                  linkUrl: "http://www.amazon.fr/",
+                },
+                {
+                  linkName: "TOP ACHAT",
+                  linkUrl: "http://www.topachat.com/accueil/index.php",
+                },
+                {
+                  linkName: "RUE DU COMMERCE",
+                  linkUrl: "http://www.rueducommerce.fr/home/index.htm",
+                },
+              ],
+            },
+            {
+              catName: "Media",
+              catLinks: [
+                {
+                  linkName: "CNN",
+                  linkUrl: "http://www.cnn.com/",
+                },
+                {
+                  linkName: "EURONEWS",
+                  linkUrl: "http://www.euronews.net/",
+                },
+                {
+                  linkName: "LE SOIR",
+                  linkUrl: "http://www.lesoir.be/",
+                },
+                {
+                  linkName: "7SUR7",
+                  linkUrl: "http://www.7sur7.be/",
+                },
+                {
+                  linkName: "FEEDLY",
+                  linkUrl: "http://feedly.com/",
+                },
+                {
+                  linkName: "BBC",
+                  linkUrl: "http://news.bbc.co.uk/",
+                },
+                {
+                  linkName: "FIGARO",
+                  linkUrl: "http://www.lefigaro.fr/",
+                },
+                {
+                  linkName: "MONDE",
+                  linkUrl: "http://www.lemonde.fr/",
+                },
+              ],
+            },
+          ];
+        },
+      ]);
     </script>
-</head>
+  </head>
 
-<body ng-controller=mainController>
-    <div class=container-fluid>
-        <div class=row>
-            <div class="col-sm-3 col-md-2 sidebar">
-                <div class=upper-condition>
-                    <div class=weatherLocation>Now, in {{weatherLocation}}</div>
-                    <div class=condition-u>
-                        <div class=conditionImage><img ng-src={{conditionImage}} title={{conditionImageTitle}}></div>
-                        <div class=conditionTemp>
-                            <strong>{{conditionTemp}}°c</strong><br/> {{conditionImageTitle}}
-                        </div>
-                    </div>
-                </div>
+  <body ng-controller="mainController">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <div class="upper-condition">
+            <div class="weatherLocation">Now, in {{weatherLocation}}</div>
+            <div class="condition-u">
+              <div class="conditionImage">
+                <img
+                  ng-src="{{conditionImage}}"
+                  title="{{conditionImageTitle}}"
+                />
+              </div>
+              <div class="conditionTemp">
+                <strong>{{conditionTemp}}°c</strong><br />
+                {{conditionImageTitle}}
+              </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-                <center style="margin-top:25px;">
-                    <a href="https://www.google.com/">
-                        <img src="images/Logo_Google.png" border=0 alt=Google align=middle class=glogo title="© 2012 Google Inc. All rights reserved. Google and the Google Logo are registered trademarks of Google Inc.">
-                    </a>
-                </center>
-                <div class=referedLinks>
-                    <div class=category ng-repeat="cat in links">
-                        <div class=catName ng-click="itemClicked($index)" ng-init="cat.linksLenght = predefinedMaxLinks">
-                            {{cat.catName}}
-                            <span ng-show="cat.catLinks.length>cat.linksLenght && windowWidth>1" ng-click="cat.linksLenght=cat.catLinks.length">+</span>
-                            <span ng-hide="(cat.catLinks.length!=cat.linksLenght||cat.catLinks.length==predefinedMaxLinks) || windowWidth==1" ng-click="cat.linksLenght=predefinedMaxLinks">-</span>
-                        </div>
-                        <span class=catLinks ng-class="{ 'catLinks_v': $index == selectedIndex }">
-                        <span ng-repeat="link in cat.catLinks" ng-hide="$index > (cat.linksLenght-1) && windowWidth>1">
-                              <a href="{{link.linkUrl}}" target=_blank><div class=catLink>{{link.linkName}}</div></a>
-                        </span>
-                        </span>
-                    </div>
-                </div>
-                {{test}}
-                <p class=credits-google>© 2012 Google Inc. All rights reserved. Google and the Google Logo are registered trademarks of Google Inc.</p>
-            </div>
-            <div class="col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10 sidebar lower-sidebar">
-                <div ng-repeat="day in forecastday">
-                    <div ng-if="day.period>1">
-                        <div class=lower-conditions>
-                            <div class=weatherLocation>{{day.date.weekday}}</div>
-                            <div class=condition>
-                                <div class=conditionImage><img ng-src={{day.conditionImage}} title={{day.conditions}}></div>
-                                <div class=conditionTemp>
-                                    <strong>{{day.high.celsius}}°c</strong> max<br/>
-                                    <strong>{{day.low.celsius}}°c</strong> min<br/> {{day.conditions}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=credits>
-                    <p style="text-align: center;margin-bottom: 0px;">
-                        Weather provided by
-                    </p>
-                    <img src="images/wundergroundLogo_small.png" style="width: 100%;">
-                    <p style="font-size:8px;text-align: center;margin-bottom: 0px;margin-top:3px;">last updated on {{lastWeatherDataUpdate}}</p>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+          <center style="margin-top: 25px">
+            <a href="https://www.google.com/">
+              <img
+                src="images/Logo_Google.png"
+                border="0"
+                alt="Google"
+                align="middle"
+                class="glogo"
+                title="© 2012 Google Inc. All rights reserved. Google and the Google Logo are registered trademarks of Google Inc."
+              />
+            </a>
+          </center>
+          <div class="referedLinks">
+            <div class="category" ng-repeat="cat in links">
+              <div
+                class="catName"
+                ng-click="itemClicked($index)"
+                ng-init="cat.linksLenght = predefinedMaxLinks"
+              >
+                {{cat.catName}}
+                <span
+                  ng-show="cat.catLinks.length>cat.linksLenght && windowWidth>1"
+                  ng-click="cat.linksLenght=cat.catLinks.length"
+                  >+</span
+                >
+                <span
+                  ng-hide="(cat.catLinks.length!=cat.linksLenght||cat.catLinks.length==predefinedMaxLinks) || windowWidth==1"
+                  ng-click="cat.linksLenght=predefinedMaxLinks"
+                  >-</span
+                >
+              </div>
+              <span
+                class="catLinks"
+                ng-class="{ 'catLinks_v': $index == selectedIndex }"
+              >
+                <span
+                  ng-repeat="link in cat.catLinks"
+                  ng-hide="$index > (cat.linksLenght-1) && windowWidth>1"
+                >
+                  <a href="{{link.linkUrl}}" target="_blank"
+                    ><div class="catLink">{{link.linkName}}</div></a
+                  >
+                </span>
+              </span>
+            </div>
+          </div>
+          {{test}}
+          <p class="credits-google">
+            © 2012 Google Inc. All rights reserved. Google and the Google Logo
+            are registered trademarks of Google Inc. XTweb.
+          </p>
+        </div>
+        <div
+          class="col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10 sidebar lower-sidebar"
+        >
+          <div ng-repeat="day in forecastday">
+            <div ng-if="day.period>1">
+              <div class="lower-conditions">
+                <div class="weatherLocation">{{day.date.weekday}}</div>
+                <div class="condition">
+                  <div class="conditionImage">
+                    <img
+                      ng-src="{{day.conditionImage}}"
+                      title="{{day.conditions}}"
+                    />
+                  </div>
+                  <div class="conditionTemp">
+                    <strong>{{day.high.celsius}}°c</strong> max<br />
+                    <strong>{{day.low.celsius}}°c</strong> min<br />
+                    {{day.conditions}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="credits">
+            <p style="text-align: center; margin-bottom: 0px">
+              Weather provided by
+            </p>
+            <img src="images/wundergroundLogo_small.png" style="width: 100%" />
+            <p
+              style="
+                font-size: 8px;
+                text-align: center;
+                margin-bottom: 0px;
+                margin-top: 3px;
+              "
+            >
+              last updated on {{lastWeatherDataUpdate}}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-4275333-6', 'auto');
-        ga('send', 'pageview');
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-4275333-6", "auto");
+      ga("send", "pageview");
     </script>
-</body>
-
+  </body>
 </html>
